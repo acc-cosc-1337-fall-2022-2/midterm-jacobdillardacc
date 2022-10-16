@@ -1,6 +1,19 @@
 #include "question2.h"
 
-bool test_config()
+string get_factorial_sequence(int num)
 {
-    return true;
+    int factorial = 1;
+    string temp = "";
+    stringstream sequence;
+    
+    for(int i =1; i <= num; ++i)
+    {
+        factorial *= i;
+        if (i != num)
+        sequence << i << "x";
+        temp = sequence.str();
+    }
+    
+    sequence << num << "=" << factorial;
+    return sequence.str();
 }

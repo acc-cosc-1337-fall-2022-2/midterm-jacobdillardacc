@@ -6,7 +6,16 @@ TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
 
-TEST_CASE("test")
+TEST_CASE("Verify ref_swap and val_swap functions")
 {
-	REQUIRE(test_config() == true);
+	int num1 = 2;
+	int num2 = 4;
+	
+	ref_swap(num1,num2);
+	REQUIRE(num1 == 4);
+	REQUIRE(num2 == 2);
+	
+	val_swap(num1,num2);
+	REQUIRE(num1 == 4);
+	REQUIRE(num2 == 2);
 }
